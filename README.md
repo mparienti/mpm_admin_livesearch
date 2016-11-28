@@ -1,5 +1,5 @@
-Live Search Module
-==================
+# Live Search Module
+
 
 This module allows you to make live search in the modules list of your shop.
 
@@ -9,7 +9,7 @@ https://github.com/OXID-eSales/oxideshop_ce/pull/513
 Until this pull request is merged, you can modify manually your shop.
 
 
-###Installation:
+## Installation
 Copy the folder mpm/ to the module directory of your shop.
 
 
