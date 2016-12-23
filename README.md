@@ -1,12 +1,12 @@
 # Live Search Module
 
 
-This module allows you to make live search in the modules list of your shop.
+This module allows you to make live search in the modules list of your shop,
+in the admin of your shop.
 
-It needs the pull request 513 to be merged:
-https://github.com/OXID-eSales/oxideshop_ce/pull/513
-
-Until this pull request is merged, you can modify manually your shop.
+For old version of Oxid eShop, you may need to manually patch your shop with
+the content of following patch:
+https://github.com/OXID-eSales/oxideshop_ce/pull/513/files
 
 
 ## Installation
