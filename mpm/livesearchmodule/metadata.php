@@ -10,6 +10,7 @@ $sMetadataVersion = '1.0';
 $aModule = array(
     'id' => 'livesearchmodule',
     'title' => 'Live Search in Modules',
+    'url' => 'https://github.com/mparienti/mpm_livesearch_in_oxid_modules_list',
     'email' => 'michael.parienti@oxid-esales.com',
     'description'  => array(
         'en' => 'Display a search form, to filter modules list',
