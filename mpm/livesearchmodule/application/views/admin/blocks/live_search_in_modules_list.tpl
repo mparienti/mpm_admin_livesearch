@@ -7,6 +7,7 @@
            var table_module = document.getElementsByTagName('table')[0];
            var r = 2;
            var row, row_text;
+           document.cookie = "search_module=" + text;
            if (text == "") { // if empty - restore
              while(row=table_module.rows[r++]) {
                row.style.display="table-row";
@@ -27,6 +28,15 @@
          document.getElementById('reset_search_module').onclick = function () {
            document.getElementById('search_module').value = '';
            search_module();
+         };
+         document.onreadystatechange = function () {
+           if (document.readyState === "interactive") {
+             var previousearch = document.cookie.replace(/(?:(?:^|.*;\s*)search_module\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+             if (previousearch != '') {
+               document.getElementById('search_module').value = previousearch;
+               search_module();
+             }
+           }
          };
         </script>
       </div>
