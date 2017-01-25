@@ -22,5 +22,8 @@ $aModule = array(
         array('template' => 'module_list.tpl',
               'block' => 'admin_modules_list_table',
               'file' => 'application/views/admin/blocks/live_search_in_modules_list.tpl'),
+        array('template' => 'module_sortlist.tpl',
+              'block' => 'admin_modules_sortlist_content',
+              'file' => 'application/views/admin/blocks/live_search_modules_classes_list.tpl'),
     ),
 );

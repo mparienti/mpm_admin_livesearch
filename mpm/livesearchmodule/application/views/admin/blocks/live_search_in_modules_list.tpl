@@ -1,5 +1,5 @@
       <div id="live_search_in_modules_list">
-        [{ oxmultilang ident="MPM_LIVESEARCHMODULE_SEARCH_LABEL" }]:
+        [{ oxmultilang ident="MPM_LIVESEARCHMODULE_SEARCH_MODULE_LABEL" }]:
         <input type="type" id="search_module" /><input type="button" value="[{ oxmultilang ident="MPM_LIVESEARCHMODULE_SEARCH_RESET" }]" id="reset_search_module" />
         <script type="text/javascript">
          function search_module() {
