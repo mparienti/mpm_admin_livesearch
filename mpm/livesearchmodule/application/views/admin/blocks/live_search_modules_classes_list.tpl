@@ -17,13 +17,20 @@
            }
            while(li=lis[r++]) {
              row_text = li.innerText.trim().toLowerCase();
-             if (row_text.indexOf(text) < 0) {
-               li.style.display="none";
-             } else {
+             if ( search(row_text, text) ) {
                li.style.display="block";
+             } else {
+               li.style.display="none";
              }
            }
            return;
+         }
+         function search(haystack, needle) {
+           var ln = needle.split(' ');
+           for (i=0;i<ln.length;i++) {
+             if (haystack.indexOf(ln[i]) < 0) return false;
+           }
+           return true;
          }
          document.getElementById('search_class').onkeyup = search_class;
          document.getElementById('reset_search_class').onclick = function () {
