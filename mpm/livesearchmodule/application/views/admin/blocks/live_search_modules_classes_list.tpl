@@ -1,14 +1,16 @@
+[{ assign var="oConf"     value=$oViewConf->getConfig() }]
       <div id="live_search_in_classes_modules_list">
         [{ oxmultilang ident="MPM_LIVESEARCHMODULE_SEARCH_CLASS_LABEL" }]:
         <input type="type" id="search_class" /><input type="button" value="[{ oxmultilang ident="MPM_LIVESEARCHMODULE_SEARCH_RESET" }]" id="reset_search_class" />
         <script type="text/javascript">
+         var search_class_storage_key = "[{$oConf->getShopURL()}]-[{$oConf->getShopId()}]-class";
          function search_class() {
            var text = document.getElementById('search_class').value.trim().toLowerCase();
            var classes_list = document.getElementById('aModulesList');
            var lis = classes_list.children;
            var r = 0;
            var li, row_text;
-           document.cookie = "search_class=" + text;
+           try { window['localStorage'].setItem(search_class_storage_key, text); } catch(e){ console.log(e)}
            if (text == "") { // if empty - restore
              while(li=lis[r++]) {
                li.style.display="block";
@@ -39,7 +41,8 @@
          };
          document.onreadystatechange = function () {
            if (document.readyState === "interactive") {
-             var previousearch = document.cookie.replace(/(?:(?:^|.*;\s*)search_class\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+             var previousearch = '';
+             try { previousearch = window['localStorage'].getItem(search_module_storage_key); } catch(e){}
              if (previousearch != '') {
                document.getElementById('search_class').value = previousearch;
                search_class();
