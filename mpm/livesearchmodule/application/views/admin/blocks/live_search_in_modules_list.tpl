@@ -7,7 +7,7 @@
          var search_module_storage_key = "[{$oConf->getShopURL()}]-[{$oConf->getShopId()}]-module";
          document.onreadystatechange = function () {
            if (document.readyState === "interactive") {
-             search_module = mpm_bluid_search('search_module', document.getElementsByTagName('table')[0], search_module_storage_key, 'table-row', true, 2);
+             search_module = mpm_bluid_search('search_module', document.getElementsByTagName('table')[0], search_module_storage_key, true, 2);
              document.getElementById('search_module').onkeyup = search_module;
              document.getElementById('reset_search_module').onclick = function () {
                document.getElementById('search_module').value = '';

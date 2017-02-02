@@ -1,17 +1,17 @@
-function mpm_exists() { console.log('ja');}
-
-function mpm_bluid_search(id_form, container, storage_key, default_display, use_row = false, first_children=0) {
+function mpm_bluid_search(id_form, container, storage_key, use_row = false, first_children=0) {//display
 
   return function () {
     var text = document.getElementById(id_form).value.trim().toLowerCase();
     var lis;
     var r = first_children;
-    var li, row_text;
+    var li, row_text, default_display;
 
     if (use_row) {
       lis = container.rows;
+      default_display = 'table-row';
     } else {
       lis = container.children;
+      default_display = 'block';
     }
 
     try { window['localStorage'].setItem(storage_key, text); } catch(e){ console.log(e)}
@@ -40,24 +40,3 @@ function mpm_common_search_text(haystack, needle) {
   }
   return true;
 }
-function launch() {
-  
-}
-
-/*
- document.getElementById('search_class').onkeyup = search_class;
- document.getElementById('reset_search_class').onclick = function () {
-   document.getElementById('search_class').value = '';
-   search_class();
- };
-document.onreadystatechange = function () {
-   if (document.readyState === "interactive") {
-     var previousearch = '';
-     try { previousearch = window['localStorage'].getItem(search_module_storage_key); } catch(e){}
-     if (previousearch != '') {
-       document.getElementById('search_class').value = previousearch;
-       search_class();
-     }
-   }
-};
-*/
