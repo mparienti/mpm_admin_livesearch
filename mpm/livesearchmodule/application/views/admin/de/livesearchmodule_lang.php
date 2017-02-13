@@ -4,13 +4,14 @@
  * First letter is always capitalized
  * All nouns are capitalized
  */
-$sLangName = 'Deutsch';
+$sLangName = 'English';
 
 // -------------------------------
 // RESOURCE IDENTIFIER = STRING
 // -------------------------------
 $aLang = array(
     'charset' => 'UTF-8',
-    'MPM_LIVESEARCHMODULE_SEARCH_LABEL' => 'Such ein Module',
+    'MPM_LIVESEARCHMODULE_SEARCH_MODULE_LABEL' => 'Finden Modulen',
+    'MPM_LIVESEARCHMODULE_SEARCH_CLASS_LABEL' => 'Finden Klassen',
     'MPM_LIVESEARCHMODULE_SEARCH_RESET' => 'Löschen',
 );
