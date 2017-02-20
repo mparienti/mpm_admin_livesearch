@@ -1,3 +1,4 @@
+<style>.mpm_hg {background:yellow;}</style>
 <script src="[{$oViewConf->getModuleUrl('livesearchmodule','out/src/js/mpm-admin-livesearch.js')}]" type="text/javascript" ></script>
 [{ assign var="oConf"     value=$oViewConf->getConfig() }]
       <div id="live_search_in_modules_list">
@@ -23,5 +24,4 @@
          };
         </script>
       </div>
-
-[{$smarty.block.parent}]
+      [{$smarty.block.parent}]
