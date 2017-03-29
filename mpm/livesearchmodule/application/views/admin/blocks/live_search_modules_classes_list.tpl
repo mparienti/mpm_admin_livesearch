@@ -1,4 +1,4 @@
-<style>.mpm_hg {background:yellow;}</style>
+<style>.mpm_hg {background:initial!important;background-color:yellow!important;padding:initial!important;}</style>
 <script src="[{$oViewConf->getModuleUrl('livesearchmodule','out/src/js/mpm-admin-livesearch.js')}]" type="text/javascript" ></script>
 
 [{ assign var="oConf"     value=$oViewConf->getConfig() }]
